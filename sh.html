@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ивенты - Parkour Minecraft Event</title>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header>
+  <nav>
+    <a href="index.html" class="neon-link">Ивенты</a>
+    <a href="jumps.html" class="neon-link">Прыжки</a>
+    <a href="maps.html" class="neon-link">Карты</a>
+    <a href="sh.html" class="neon-link">Термины</a>
+  </nav>
+</header>
+
+<section id="events" class="neon-section">
+  <h2 class="neon-title">Event Parkour</h2>
+  <div class="grid">
+
+    <div class="cell jump-cell" style="--cell-color:#1e90ff;">
+        <h3 class="category-title easy">🟢 Инпуты</h3>
+        <div class="grid">
+          <div class="cell">
+            <h4><span class="neon-n2">Jam</span> - одновременно зажать пробел и <span class="neon-n">N</span> клавишу.</h4>
+            <p>Например: Jam <span class="neon-n">D</span> -> Зажать одновременно Ctrl + Space + <span class="neon-n">D.</span></p>
+          </div>
+          <div class="cell">
+            <h4><span class="neon-n2">Pessi</span> - Зажать просто пробел и через M тиков нужно зажать <span class="neon-n">N</span> клавишу(ы).</h4>
+            <p>Например: pessi 5t <span class="neon-n">D</span> - Прыгнуть и через 5 тиков зажать <span class="neon-n">D.</span> </p>
+          </div>
+          <div class="cell">
+            <h4><span class="neon-n2">FMM</span> - jam с <span class="neon-n">N</span> клавишой(ами) и зажатием Ctrl на M тик после прыжка.</h4>
+            <p>Например: FMM 5t <span class="neon-n">WD</span> - Jam с <span class="neon-n">WD</span> и зажатием ctrl на 5 тик после прыжка.</p>
+          </div>
+          <div class="cell">
+            <h4><span class="neon-n2">c4.5</span> - Как FMM, но нужно пробежать 1 тик. По умолчанию - это Ctrl на 4т после прыжка. Может быть и другое.</h4>
+            <p>Например: 2t c4.5 <span class="neon-n">WD</span> - FMM <span class="neon-n">WD</span>, зажатием ctrl на 2 тике после прыжка и пробежка 1 тика после этого всего.</p>
+          </div>
+          <div class="cell">
+            <h4><span class="neon-n2">mark</span> - jam с <span class="neon-n">A/D</span> и через M тиков зажимание <span class="neon-n">W/S</span></h4>
+            <p>Например: mark 5t back - jam с <span class="neon-n">A/D</span> и через 5т зажать <span class="neon-n">S</span>.</p>
+            <p>Еще например: mark 1t - jam с <span class="neon-n">A/D</span> и через тик добавить <span class="neon-n">W</span>.</p>
+          </div>
+          <div class="cell">
+            <h4><span class="neon-n2">WAD</span> Mt / <span class="neon-n2">WDWA</span> sidestep - вид переключения между <span class="neon-n">WA</span> и <span class="neon-n">WD</span> (<span class="neon-n">WD</span> и <span class="neon-n">WA</span>). WAD - прыжок вперед (<span class="neon-n">W</span>), WDWA - прыжок стрейфом (<span class="neon-n">WA/WD</span>)</h4>
+            <p>Например: 2t <span class="neon-n">WD</span> WAD 5t - пробежать 2 тика <span class="neon-n">WD</span>, прыжок <span class="neon-n">W</span> в течении 5 тиков и после этого нажать A</p> 
+          </div>
+          <div class="cell">
+            <h4><span class="neon-n2">BMHH</span> - 1 тик <span class="neon-n">S</span>, jam <span class="neon-n">S</span> и через тик нажать <span class="neon-n">W</span></h4>
+            <p>Например: BMHH 2t - 1 тик <span class="neon-n">S</span>, jam <span class="neon-n">S</span> и через 2 тика нажать <span class="neon-n">W</span></p>
+          </div>
+          <div class="cell">
+            <h4><span class="neon-n2">BWMM</span> (Back Walk Momentum) Mt - Jam <span class="neon-n">S</span>, пробежать Mт <span class="neon-n">S</span>, jam <span class="neon-n">W</span></h4>
+            <p>Например BWMM 2t - Jam <span class="neon-n">S</span>, пробежать 2 тика <span class="neon-n">S</span>, jam <span class="neon-n">W</span></p>
+          </div>
+        </div>
+
+        <h3 class="category-title medium">🟡 Сетапы</h3>
+        <div class="grid">
+          <div class="cell">
+            <h4><span class="neon-n2">sN</span> - С шифтом тапнуть <span class="neon-n">N</span></h4>
+            <p>Например: 5sW - С шифтом 5 раз тапнуть <span class="neon-n">W</span></p>
+          </div>
+          <div class="cell">
+            <h4><span class="neon-n2">uN</span> - Без шифта тапнуть <span class="neon-n">N</span></h4>
+            <p>Например: 3uD - Без шифта 3 раза тапнуть <span class="neon-n">D</span></p>
+          </div>
+          <div class="cell">
+            <h4><span class="neon-n2">auN</span> - В воздухе без шифта тапнуть <span class="neon-n">N</span></h4>
+            <p>Например: 1auS - В воздухе без шифта 1 раз тапнуть <span class="neon-n">S</span></p>
+          </div>
+          <div class="cell">
+            <h4><span class="neon-n2">asN</span> - В воздухе с шифтом тапнуть <span class="neon-n">N</span></h4>
+            <p>Например: 2asA - В воздухе с шифтом 2 раза тапнуть <span class="neon-n">A</span></p>
+          </div>
+          <div class="cell">
+            <h4><span class="neon-n2">ssN</span> = С щитом, с шифтом тапнуть <span class="neon-n">N</span></h4>
+            <p>Например: 1ssS - С щитом, с шифтом 1 раз тапнуть <span class="neon-n">S</span></p>
+          </div>
+          <div class="cell">
+            <h4><span class="neon-n2">rN</span> = С Ctrl тапнуть <span class="neon-n">N<</span>/h4>
+            <p>Например: 2rW - C Ctrl 2 раза тапнуть W</p>
+          </div>
+
+        </div>
+
+        <h3 class="category-title hard">🔴 Обозначения</h3>
+        <div class="grid">
+          <div class="cell">
+            <h4>1 <span class="neon-n2">тик</span> = 0.05 сек</h4>
+            <p>Например: 6 <span class="neon-n2">тиков</span> = 0.3 сек</p>
+            <p>P.S. Можете почувствовать как работает 20 тиков в секунду, поставив 20 фпс.
+          </div>
+          <div class="cell">
+            <h4><span class="neon-n2">45 Стрейф</span> (strafe) - Прыжок прямо (<span class="neon-n">W</span>), а в воздухе под 45 углом (<span class="neon-n">WA/WD</span>) или пробег (<span class="neon-n">WA/WD</span>) под 45 углом. При обычном движении игрок теряет небольшую часть скорости (<span class="neon-n">0.98</span>*V, где V - скорость), а 45 стрейф позволяет выйти на полную скорость (<span class="neon-n">1</span>*V)</h4>
+            <p></p>
+          </div>
+          <div class="cell">
+            <h4><span class="neon-n2">Jump Angle</span> (JA) - угол, с которымты прыгаешь на первом тике прыжка </h4>
+            <p>Например: JA = 2.35 - Нужно поймать 2.35 градус на первом тике прыжка</p>
+          </div>
+          <div class="cell">
+            <h4></h4>
+            <p></p>
+          </div>
+          <div class="cell">
+            <h4></h4>
+            <p></p>
+          </div>
+          <div class="cell">
+            <h4></h4>
+            <p></p>
+          </div>
+          <div class="cell">
+            <h4></h4>
+            <p></p>
+          </div>
+          <div class="cell">
+            <h4></h4>
+            <p></p>
+          </div>
+          <div class="cell">
+            <h4></h4>
+            <p></p>
+          </div>
+          <div class="cell">
+            <h4></h4>
+            <p></p>
+          </div>
+          <div class="cell">
+            <h4></h4>
+            <p></p>
+          </div>
+    </div>
+
+  </div>
+</section>
+
+</body>
+</html>
