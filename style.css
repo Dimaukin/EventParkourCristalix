@@ -154,6 +154,52 @@ header nav a:hover {
   cursor: pointer;
 }
 
+.category-title {
+  font-size: 28px;
+  margin: 40px 0 20px;
+  text-align: left;
+}
+
+/* Цвета категорий */
+.easy {
+  color: #00ff88;
+  text-shadow: 0 0 8px #00ff88;
+}
+
+.medium {
+  color: #ffd000;
+  text-shadow: 0 0 8px #ffd000;
+}
+
+.hard {
+  color: #ff4b2b;
+  text-shadow: 0 0 8px #ff4b2b;
+}
+
+.neon-n {
+  color: #0ff;
+  font-weight: 700;
+  text-shadow:
+    0 0 5px #0ff,
+    0 0 10px #0ff,
+    0 0 20px #0ff,
+    0 0 40px #0ff;
+}
+
+.neon-n2 {
+  font-weight: 700;
+  background: linear-gradient(90deg, #ff0000, #ff7a00);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  text-shadow:
+    0 0 5px #ff0000,
+    0 0 10px #ff0000,
+    0 0 20px #ff4b2b,
+    0 0 40px #ff7a00,
+    0 0 80px #ff7a00;
+}
+
 /* ---------------- Responsive ---------------- */
 @media (max-width: 768px) {
   .grid {
