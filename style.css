@@ -52,8 +52,8 @@ header nav a:hover {
 /* ---------------- Grid layout ---------------- */
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* увеличенные ячейки */
-  gap: 20px; /* ячейки ближе друг к другу */
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
   justify-items: center;
 }
 
@@ -66,43 +66,12 @@ header nav a:hover {
   backdrop-filter: blur(10px);
   transition: transform 0.3s, box-shadow 0.3s;
   width: 100%;
+  position: relative;
 }
 
-.cell img {
-  width: 100%;
-  border-radius: 15px;
-  margin-bottom: 12px;
-  transition: transform 0.3s;
-}
-
-.cell:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 0 16px #ff4b2b, 0 0 32px #ff4b2b;
-}
-
-.cell:hover img {
-  transform: scale(1.05);
-}
-
-.cell p,
-.cell h4 {
-  margin-bottom: 8px;
-  font-weight: 500;
-}
-
-/* ---------------- Прыжки (индивидуальный цвет) ---------------- */
-.jump-cell {
-  border: 2px solid var(--cell-color, #0ff);
-  box-shadow: 0 0 8px var(--cell-color, #0ff), 0 0 16px var(--cell-color, #0ff);
-  transition: 0.3s;
-}
-
-.jump-cell:hover {
-  box-shadow: 0 0 16px var(--cell-color, #ff4b2b), 0 0 32px var(--cell-color, #ff4b2b);
-}
-
-/* ---------------- Карты (современные градиенты) ---------------- */
+/* ---------------- Карты: фон через div.bg ---------------- */
 .map-cell {
+  position: relative;
   background: linear-gradient(135deg, #00f, #ff4b2b);
   border-left: 4px solid #ff4b2b;
   padding: 20px;
@@ -110,13 +79,34 @@ header nav a:hover {
   text-align: left;
   box-shadow: 0 0 12px #0ff, 0 0 24px #ff4b2b;
   transition: transform 0.3s, box-shadow 0.3s;
+  overflow: hidden;
 }
 
+/* div.bg для подложки изображения */
+.map-cell .bg {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 0.4s ease-in-out;
+  z-index: 0;
+  border-radius: 15px;
+}
+
+/* Текст поверх картинки */
+.map-cell > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Hover эффекты для карты */
 .map-cell:hover {
   transform: translateY(-10px);
   box-shadow: 0 0 24px #0ff, 0 0 48px #ff4b2b;
 }
 
+/* Заголовки и текст */
 .map-cell h4 {
   font-size: 18px;
   color: #fff;
@@ -128,6 +118,17 @@ header nav a:hover {
   font-size: 14px;
   color: #fff;
   margin-bottom: 4px;
+}
+
+/* ---------------- Прыжки (индивидуальный цвет) ---------------- */
+.jump-cell {
+  border: 2px solid var(--cell-color, #0ff);
+  box-shadow: 0 0 8px var(--cell-color, #0ff), 0 0 16px var(--cell-color, #0ff);
+  transition: 0.3s;
+}
+
+.jump-cell:hover {
+  box-shadow: 0 0 16px var(--cell-color, #ff4b2b), 0 0 32px var(--cell-color, #ff4b2b);
 }
 
 /* ---------------- Neon links ---------------- */
@@ -143,9 +144,10 @@ header nav a:hover {
   text-shadow: 0 0 8px #ff4b2b, 0 0 16px #ff4b2b;
 }
 
+/* ---------------- Звезды ---------------- */
 .star, .star.empty {
   font-size: 20px;
-  color: #FFD700; /* желтый цвет */
+  color: #FFD700;
   margin-right: 2px;
 }
 
@@ -154,13 +156,13 @@ header nav a:hover {
   cursor: pointer;
 }
 
+/* ---------------- Категории ---------------- */
 .category-title {
   font-size: 28px;
   margin: 40px 0 20px;
   text-align: left;
 }
 
-/* Цвета категорий */
 .easy {
   color: #00ff88;
   text-shadow: 0 0 8px #00ff88;
@@ -176,6 +178,7 @@ header nav a:hover {
   text-shadow: 0 0 8px #ff4b2b;
 }
 
+/* ---------------- Neon Text Effects ---------------- */
 .neon-n {
   color: #0ff;
   font-weight: 700;
@@ -188,10 +191,10 @@ header nav a:hover {
 
 .neon-n2 {
   font-weight: 700;
+  display: inline-block;
   background: linear-gradient(90deg, #ff0000, #ff7a00);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-
   text-shadow:
     0 0 5px #ff0000,
     0 0 10px #ff0000,
